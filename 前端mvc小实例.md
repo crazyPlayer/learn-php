@@ -1,8 +1,7 @@
 #前端MVC小实例
-随着前端Ajax兴起、前端开发工作进一步划分：js程序员和ue页面制作、另外从整个前端项目的清晰明朗以可扩展性角度来看，
-MVC的应用也越来越必要，特别是对大的项目。
+随着前端Ajax兴起,前端开发工作进一步划分,从整个前端项目的清晰明朗、可扩展性角度来看，MVC的应用也越来越必要，特别是对大的项目。
 
-*_例如：需要给一个页面上的button注册一个onclick事件。_*
+_例如：需要给一个页面上的button注册一个onclick事件。_
 
 1、我们可以有如下最简洁的写法：（view和model control完全混合）
 ```html
@@ -51,7 +50,7 @@ o.onclick = function(){
   }
 ```
 4、符合MVC框架的实现：（view、mode和control完全分离）
->View视图的view.html代码：
+View视图的view.html代码：
 ```html
 <HTML>
 <HEAD>
@@ -60,11 +59,11 @@ o.onclick = function(){
 <BODY>
 <input type="button" value="baidu" id="baidu"/>
 </BODY>
-    <script src="model.js"></script>
+<script src="model.js"></script>
 <script src="control.js"></script>
 </HTML>
 ```
->实现control控制功能的control.js代码：
+实现control控制功能的control.js代码：
 ```javascript
 function G(id){
        return document.getElementById(id);
@@ -74,11 +73,15 @@ UI.register = function(id,even,fun,arr){
        if(G(id)) G(id)["on"+even] = function(){ fun(arr);};
 }
 UI.register("baidu","click",tipInfo,[1,2]);
+//control.js的代码就是实现html页面节点事件的注册
+//第一参数：为button节点id
+//第二参数：为需要注册的触发事件
+//第三参数：事件触发函数
+//第四参数：需要传递的参数
  ```
- >具体的函数操作，可以放到model模块中执行:
- ```
+ 具体的函数操作，可以放到model模块中执行:
+ ```javascript
  function tipInfo(arr){
            alert(arr[1]);
-           //实现其他组件功能，例如popup、form等。都属于model模型
     }
-    ```
+```
