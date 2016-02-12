@@ -3,7 +3,7 @@
 
 _例如：需要给一个页面上的button注册一个onclick事件。_
 
-####1、我们可以有如下最简洁的写法：（view和model control完全混合）
+######1、我们可以有如下最简洁的写法：（view和model control完全混合）
 ```html
 <HTML>
 <HEAD>
@@ -14,7 +14,7 @@ _例如：需要给一个页面上的button注册一个onclick事件。_
 </BODY>
 </HTML>
 ```
-####2、将html和js代码进行适当分离：（view和model control在同一页面适当分离）
+######2、将html和js代码进行适当分离：（view和model control在同一页面适当分离）
 ```html
 <HTML>
 <HEAD>
@@ -30,7 +30,7 @@ _例如：需要给一个页面上的button注册一个onclick事件。_
 </BODY>
 </HTML>
 ```
-####3、将html和js代码彻底分离：（view和model control完全分离）
+######3、将html和js代码彻底分离：（view和model control完全分离）
 ```html
 <HTML>
 <HEAD>
@@ -49,7 +49,7 @@ o.onclick = function(){
        alert(this.value);
   }
 ```
-####4、符合MVC框架的实现：（view、mode和control完全分离）
+######4、符合MVC框架的实现：（view、mode和control完全分离）
 
 View视图的view.html代码：
 ```html
