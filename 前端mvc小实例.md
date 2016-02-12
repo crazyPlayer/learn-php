@@ -1,5 +1,5 @@
 #前端MVC小实例
-随着前端Ajax兴起,前端开发工作进一步划分,从整个前端项目的清晰明朗、可扩展性角度来看，MVC的应用也越来越必要，特别是对大的项目。
+随着前端Ajax兴起，前端开发工作进一步划分，从整个前端项目的清晰明朗、可扩展性角度来看，MVC的应用也越来越必要，特别是对大的项目。
 
 _例如：需要给一个页面上的button注册一个onclick事件。_
 
@@ -50,6 +50,7 @@ o.onclick = function(){
   }
 ```
 4、符合MVC框架的实现：（view、mode和control完全分离）
+
 View视图的view.html代码：
 ```html
 <HTML>
@@ -85,3 +86,7 @@ UI.register("baidu","click",tipInfo,[1,2]);
            alert(arr[1]);
     }
 ```
+>总结：
+* View：只管页面的显示和样式展示
+* Control：进行页面节点事件的注册和控制，以及页面加载性能的实现
+>* Model：真正的逻辑处理，例如jslib库中的form、popup、drag等功能组件都属于model模块
