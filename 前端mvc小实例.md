@@ -86,7 +86,7 @@ UI.register("baidu","click",tipInfo,[1,2]);
            alert(arr[1]);
     }
 ```
->总结：
-* View：只管页面的显示和样式展示
+**总结**
+>* View：只管页面的显示和样式展示
 * Control：进行页面节点事件的注册和控制，以及页面加载性能的实现
 >* Model：真正的逻辑处理，例如jslib库中的form、popup、drag等功能组件都属于model模块
