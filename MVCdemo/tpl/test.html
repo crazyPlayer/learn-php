@@ -1,0 +1,15 @@
+<html>
+<head>
+<link href="css\style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<ul>
+<li class="head">MEAL</li><li class="head">FOOD</li>
+{foreach from=$arr key=k item=v}
+{foreach from=$v key=kk item=vv}
+<li>{$vv}</li>
+{/foreach}
+{/foreach}
+</ul>
+</body>
+</html>
