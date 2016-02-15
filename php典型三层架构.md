@@ -117,4 +117,3 @@ _config.php_
     $mysql_database="network"; // 数据库的名字
 ?> 
 ```
-##前后端分离
